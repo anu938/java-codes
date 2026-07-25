@@ -1,0 +1,37 @@
+public class Main{
+    public static void main(String []args){
+        int[] arr = {5,6,8,9};
+        int[] arr1 = {6,14,15,8};
+        for(int i = 0;i<arr.length;i++)
+        {
+            int count = 0;
+            for(int j=0;j<arr1.length;j++)
+            {
+                if(arr[i]==arr1[j])
+                {
+                    count = count+1;
+                }
+            }
+            if(count==0)
+            {
+                System.out.println(arr1[i]+" ");
+    }
+    }
+    for(int i=0;i<arr1.length;i++)
+    {
+        int count=0;
+        for(int j=0;j<arr.length;j++)
+        {
+            if(arr1[i]==arr[j])
+            {
+                count=count+1;
+            }}
+            if(count==0)
+            {
+                System.out.println(arr1[i]+" ");
+            }
+            }
+        
+}
+}
+    
