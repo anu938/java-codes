@@ -1,0 +1,26 @@
+class student {
+    private int id;
+    private String name;
+    public void setID(int id){
+        this.id = id;
+        }
+        public void setName(String name) {
+            this.name = name;
+        }
+        public int getID(){
+            return id;
+        }
+        public String getName(){
+            return name;
+        }
+}
+        public class Main {
+            public static void main(String []args){
+                student s = new student();
+                s.setID(101);
+                s.setName("Anusha");
+                System.out.println("ID:" + s.getID());
+                System.out.println("Name:" + s.getName());
+            }
+               }
+        
