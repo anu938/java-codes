@@ -1,0 +1,54 @@
+ abstract class payment{
+     protected double amount;
+     payment (double amount){
+         this.amount = amount;
+     }
+     abstract void pay();
+     void receipt() {
+         System.out.println("Receipt Generated");
+         System.out.println("Amount paid:Rs"+amount);
+     }
+     void showpaymentstatus (){
+         System.out.println("payment Successful");
+     }
+     }
+     class Upipayment extends payment{
+         private String upiId;
+         Upipayment(double amount,String upiId) {
+             super(amount);
+             this.upiId = upiId;
+         }
+         @Override
+         void pay(){
+             System.out.println("processing UPI payment");
+             System.out.println("UPI ID:" +upiId);
+         }
+     }
+     class cardpayment extends payment{
+         private String cardNumber;
+         cardpayment(double amount,String cardNumber){
+             super(amount);
+             this.cardNumber = cardNumber;
+         }
+         @Override
+         void pay(){
+             System.out.println("processing cardpayment....");
+             System.out.println("cardNUmber:**** **** ****" +
+             cardNumber.subString(cardNumber.length()-4));
+         }
+     }
+     public class Main{
+         public static void main(String []args){
+             payment P1 = new Upipayment(550.75,"anusha@oksbi");
+             payment P2 = new cardpayment(1250.50,"1234567812345678");
+             P1.pay();
+             P1.receipt();
+             P1.showpaymentstatus();
+             System.out.println();
+             P2.pay();
+             P2.receipt();
+             P2.showpaymentstatus();
+         }
+     }
+
+       
